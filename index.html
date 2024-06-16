@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar Example</title>
+    <title></title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -50,141 +50,205 @@
             </li>
           </ul>
         </div>
-        <div class="dropdown p-3">
-          <a
-            class="navbar-item link-dark link-offset-3 link-underline-opacity-0 link-underline-opacity-100-hover dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            data-bs-offset="10,20"
-            href="#"
-            >使用教學與規範</a
-          >
-          <ul class="dropdown-menu p-2">
-            <li>
-              <a class="dropdown-item" href="process.html">預約流程教學</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="online_training.html"
-                >儀器線上學習</a
-              >
-            </li>
-          </ul>
-        </div>
-
         <a
           class="navbar-item p-3 link-dark link-offset-3 link-underline-opacity-0 link-underline-opacity-100-hover"
-          href="loginadmin.html"
-          >後台管理</a
+          id="online_training"
+          href="online_training.html"
+          >儀器線上學習</a
         >
       </div>
     </nav>
 
-    <div class="container w-75" id="main_contain" style="height: 2000px">
+    <div class="container w-75" id="main_contain">
       <div class="text-start fw-bold fs-4 mt-5">
         私立輔仁大學<br />研究資源整合發展中心
       </div>
       <samp>Center For Research Resources and Development of FJUIM</samp>
       <hr class="m-3" />
       <div class="m-3 lh-lg">
-        <ul>
-          <li>
-            <a
-              href="#"
-              class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-            >
-              <span class="opacity-50">[2024/05/14]</span
-              >[教學訓練]設備技巧使用...
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-            >
-              <span class="opacity-50">[2024/05/10]</span
-              >[最新消息]系統維護公告...</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-              ><span class="opacity-50">[2024/05/08]</span
-              >[最新消息]新進設備說明會...</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-              ><span class="opacity-50">[2024/04/27]</span
-              >[教學訓練]設備教學...</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-              ><span class="opacity-50">[2024/04/10]</span
-              >[最新消息]系統維護公告...</a
-            >
-          </li>
-        </ul>
-      </div>
-      <!-- carousel -->
-      <div class="carousel-container">
-        <div id="carouselExample" style="width: 100%" class="carousel slide">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="asset/image/car1.jpeg"
-                style="width: 100%"
-                class="d-block"
-                alt="..."
-              />
+        <!-- carousel -->
+        <div class="carousel-container p-5">
+          <div id="carouselExample" style="width: 100%" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="asset/image/car1.jpeg"
+                  style="width: 100%"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="asset/image/car2.png"
+                  style="width: 100%"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="asset/image/car3.jpg"
+                  style="width: 100%"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
             </div>
-            <div class="carousel-item">
-              <img
-                src="asset/image/car2.png"
-                style="width: 100%"
-                class="d-block"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="asset/image/car3.jpg"
-                style="width: 100%"
-                class="d-block"
-                alt="..."
-              />
-            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        </div>
+        <h3 class="fw-bold">最新公告</h3>
+        <div class="border rounded m-3 shadow-sm">
+          <ul>
+            <li class="m-3">
+              <a
+                href="#"
+                class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+              >
+                <span class="opacity-50">[2024/05/14]</span
+                >[教學訓練]設備技巧使用 緊緻型毛細管電泳DNA定序儀 教育訓練
+              </a>
+            </li>
+            <li class="m-3">
+              <a
+                href="#"
+                class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+              >
+                <span class="opacity-50">[2024/05/10]</span
+                >[最新消息]系統維護公告...</a
+              >
+            </li>
+            <li class="m-3">
+              <a
+                href="#"
+                class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                ><span class="opacity-50">[2024/05/08]</span
+                >[最新消息]新進設備說明會...</a
+              >
+            </li>
+            <li class="m-3">
+              <a
+                href="#"
+                class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                ><span class="opacity-50">[2024/04/27]</span
+                >[教學訓練]設備教學...</a
+              >
+            </li>
+            <li class="m-3">
+              <a
+                href="#"
+                class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                ><span class="opacity-50">[2024/04/10]</span
+                >[最新消息]系統維護公告...</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <!-- 僅用於模擬頁面長度 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="asset/js/main.js"></script>
     <script src="asset/js/loader.js"></script>
   </body>
+  <footer class="w-full bg-light shadow-sm">
+    <div class="d-flex h-full">
+      <div class="p-2 flex-fill">
+        <a href="index.html">
+          <img class="m-3 w-50" src="asset/image/footerlogo.png" alt=""
+        /></a>
+      </div>
+      <div class="p-2 flex-fill d-flex flex-column w-25 m-3">
+        <span class="fw-bold">快速連結</span>
+        <hr />
+        <a
+          href="instrumentlist.html"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">儀器預約狀況</span>
+        </a>
+        <a
+          href="reservation.html"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">預約儀器使用</span>
+        </a>
+        <a
+          href="sw_reservation.html"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">軟體預約</span>
+        </a>
+        <a
+          href="online_training.html"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">儀器線上學習</span>
+        </a>
+      </div>
+      <div class="p-2 flex-fill d-flex flex-column w-25 m-3">
+        <span class="fw-bold">相關連結</span>
+        <hr />
+        <a
+          href="https://www.fju.edu.tw/"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">輔仁大學全球資訊網</span>
+        </a>
+        <a
+          href="https://portal.fju.edu.tw/student/"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">FJU學生資訊入口網</span>
+        </a>
+        <a
+          href="https://elearn2.fju.edu.tw/#/"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">Tronclass</span>
+        </a>
+      </div>
+    </div>
+    <hr class="m-3" />
+    <div class="p-2 d-flex flex-column w-25 m-3 opacity-50">
+      <span class="fw-bold"
+        >地址 : <span class="fw-medium">新北市新莊區中正路510號</span></span
+      >
+      <span class="fw-bold">
+        電話 :
+        <span class="fw-medium">(02)1234-5678</span></span
+      ><span class="fw-bold">
+        傳真 :
+        <span class="fw-medium">(02)1234-5678</span></span
+      >
+      <span class="fw-bold">
+        信箱 :
+        <span class="fw-medium">fjuim@fju.edu.tw</span></span
+      >
+    </div>
+  </footer>
 </html>

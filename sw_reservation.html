@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar Example</title>
+    <title></title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="asset/css/main.css" />
+    <link rel="stylesheet" href="asset/css/calender.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
@@ -50,39 +51,265 @@
             </li>
           </ul>
         </div>
-        <div class="dropdown p-3">
-          <a
-            class="navbar-item link-dark link-offset-3 link-underline-opacity-0 link-underline-opacity-100-hover dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            data-bs-offset="10,20"
-            href="#"
-            >使用教學與規範</a
-          >
-          <ul class="dropdown-menu p-2">
-            <li>
-              <a class="dropdown-item" href="process.html">預約流程教學</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="online_training.html"
-                >儀器線上學習</a
-              >
-            </li>
-          </ul>
-        </div>
-
         <a
           class="navbar-item p-3 link-dark link-offset-3 link-underline-opacity-0 link-underline-opacity-100-hover"
-          href="loginadmin.html"
-          >後台管理</a
+          id="online_training"
+          href="online_training.html"
+          >儀器線上學習</a
         >
       </div>
     </nav>
+    <div class="container text-center w-75" id="main_contain">
+      <!-- breadcrumb -->
+      <nav style="--bs-breadcrumb-divider: '/'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a
+              class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              href="index.html"
+              style="font-size: 14px"
+              >首頁</a
+            >
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <span style="font-size: 14px; color: #005ab5">軟體預約</span>
+          </li>
+        </ol>
+      </nav>
 
-    <div class="container w-75" id="main_contain" style="height: 2000px"></div>
+      <div class="text-center fw-bold fs-4 my-5">軟體預約</div>
+      <!-- main -->
+      <div class="card m-5 border-warning border-3 border-opacity-50">
+        <div class="card-body bg-warning-subtle">
+          <h5 class="card-title">
+            <img src="asset/icon/warning.png" alt="" />
+          </h5>
+          <p class="card-text">
+            請確保您已經熟讀使用規範以及流程以及儀器的使用教學。
+          </p>
+        </div>
+      </div>
+      <h5 class="fw-bold">預約狀況</h5>
+      <div class="d-flex flex-row p-5">
+        <div class="calendar col-8 border rounded m-1" id="calendar">
+          <div
+            class="calendar_title rounded-top shadow-sm"
+            style="height: 25%"
+            id="calendar_title"
+          >
+            <div
+              id="calender_year"
+              class="text-center text-danger fw-bold fs-1"
+            ></div>
+            <div class="d-flex flex-row justify-content-between mt-3">
+              <button class="btn text-danger"><</button>
+              <div
+                id="calendar_month"
+                class="text-center text-danger fs-4 fw-bolder"
+              ></div>
+              <button class="btn text-danger">></button>
+            </div>
+          </div>
+          <div class="calendar_content" id="calendar_content">
+            <div class="calendar_week d-flex flex-row text-center">
+              <div class="flex-fill fw-bold opacity-50 mt-3">Sun</div>
+              <div class="flex-fill fw-bold opacity-50 mt-3">Mon</div>
+              <div class="flex-fill fw-bold opacity-50 mt-3">Tue</div>
+              <div class="flex-fill fw-bold opacity-50 mt-3">Wed</div>
+              <div class="flex-fill fw-bold opacity-50 mt-3">Thu</div>
+              <div class="flex-fill fw-bold opacity-50 mt-3">Fri</div>
+              <div class="flex-fill fw-bold opacity-50 mt-3">Sat</div>
+            </div>
+            <hr class="mx-3 opacity-25" />
+            <div class="d-flex flex-column" id="calendar_weeks">
+              <div
+                class="calendar_day flex-fill d-flex flex-row text-center"
+                id="week_1"
+              ></div>
+              <div
+                class="calendar_day flex-fill d-flex flex-row text-center"
+                id="week_2"
+              ></div>
+              <div
+                class="calendar_day flex-fill d-flex flex-row text-center"
+                id="week_3"
+              ></div>
+              <div
+                class="calendar_day flex-fill d-flex flex-row text-center"
+                id="week_4"
+              ></div>
+              <div
+                class="calendar_day flex-fill d-flex flex-row text-center"
+                id="week_5"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="memo_part col-4 border rounded m-1 bg-danger"
+          id="calendar_detail"
+          style="height: 100vh; font-family: monospace"
+        >
+          <div id="detail_title" class="fw-medium fs-4 p-3 text-light"></div>
+          <div
+            id="detail_content"
+            class="fw-light fs-6 p-3 text-light opacity-75"
+          ></div>
+        </div>
+      </div>
+      <h5 class="fw-bold">預約表單</h5>
+      <div class="border rounded shadow-sm p-3 m-5">
+        <form>
+          <div class="row mb-3">
+            <label for="inputName3" class="col-sm-5 col-form-label"
+              >姓名 Name</label
+            >
+            <div class="col-sm-5">
+              <input type="Text" class="form-control" id="inputName3" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputCollege3" class="col-sm-5 col-form-label"
+              >學院 College</label
+            >
+            <div class="col-sm-5">
+              <input type="Text" class="form-control" id="inputCollege3" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputManager3" class="col-sm-5 col-form-label"
+              >實驗負責人 Lab Manager</label
+            >
+            <div class="col-sm-5">
+              <input type="Text" class="form-control" id="inputManager3" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPhone3" class="col-sm-5 col-form-label"
+              >連絡電話 Contact number</label
+            >
+            <div class="col-sm-5">
+              <input type="Text" class="form-control" id="inputPhone3" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-5 col-form-label"
+              >電子信箱 Email</label
+            >
+            <div class="col-sm-5">
+              <input type="Email" class="form-control" id="inputEmail3" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputDate3" class="col-sm-5 col-form-label"
+              >預約日期 Date</label
+            >
+            <div class="col-sm-5">
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="inputDate3"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputTime3" class="col-sm-5 col-form-label"
+              >預約時間 Time</label
+            >
+            <div class="col-sm-5">
+              <input
+                type="number"
+                class="form-control"
+                id="inputTime3"
+                placeholder="hr"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">確認登記</button>
+        </form>
+      </div>
+    </div>
+
     <!-- 僅用於模擬頁面長度 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="asset/js/main.js"></script>
-    <script src="asset/js/loader.js"></script>
+    <script src="asset/js/calender.js"></script>
+    <!-- <script src="asset/js/loader.js"></script> -->
   </body>
+  <footer class="w-full bg-light shadow-sm">
+    <div class="d-flex h-full">
+      <div class="p-2 flex-fill">
+        <a href="index.html">
+          <img class="m-3 w-50" src="asset/image/footerlogo.png" alt=""
+        /></a>
+      </div>
+      <div class="p-2 flex-fill d-flex flex-column w-25 m-3">
+        <span class="fw-bold">快速連結</span>
+        <hr />
+        <a
+          href="instrumentlist.html"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">儀器預約狀況</span>
+        </a>
+        <a
+          href="reservation.html"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">預約儀器使用</span>
+        </a>
+        <a
+          href="sw_reservation.html"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">軟體預約</span>
+        </a>
+        <a
+          href="online_training.html"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">儀器線上學習</span>
+        </a>
+      </div>
+      <div class="p-2 flex-fill d-flex flex-column w-25 m-3">
+        <span class="fw-bold">相關連結</span>
+        <hr />
+        <a
+          href="https://www.fju.edu.tw/"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">輔仁大學全球資訊網</span>
+        </a>
+        <a
+          href="https://portal.fju.edu.tw/student/"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">FJU學生資訊入口網</span>
+        </a>
+        <a
+          href="https://elearn2.fju.edu.tw/#/"
+          class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+        >
+          <span class="opacity-50">Tronclass</span>
+        </a>
+      </div>
+    </div>
+    <hr class="m-3" />
+    <div class="p-2 d-flex flex-column w-25 m-3 opacity-50">
+      <span class="fw-bold"
+        >地址 : <span class="fw-medium">新北市新莊區中正路510號</span></span
+      >
+      <span class="fw-bold">
+        電話 :
+        <span class="fw-medium">(02)1234-5678</span></span
+      ><span class="fw-bold">
+        傳真 :
+        <span class="fw-medium">(02)1234-5678</span></span
+      >
+      <span class="fw-bold">
+        信箱 :
+        <span class="fw-medium">fjuim@fju.edu.tw</span></span
+      >
+    </div>
+  </footer>
 </html>
