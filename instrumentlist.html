@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="asset/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light flex flex-column shadow-sm"
+      id="myNavbar"
+    >
+      <img class="barimage m-3" src="asset/image/barimage.png" alt="" />
+      <div class="d-flex flex-row justify-content-center m-2">
+        <a
+          class="navbar-item p-3 link-dark link-offset-3 link-underline-opacity-0 link-underline-opacity-100-hover"
+          id="index"
+          href="index.html"
+          >首頁</a
+        >
+
+        <a
+          class="navbar-item p-3 link-dark link-offset-3 link-underline-opacity-0 link-underline-opacity-100-hover"
+          id="instrumentlist"
+          href="instrumentlist.html"
+          >儀器預約狀況</a
+        >
+        <div class="dropdown p-3">
+          <a
+            class="navbar-item link-dark link-offset-3 link-underline-opacity-0 link-underline-opacity-100-hover dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            data-bs-offset="10,20"
+            href="#"
+            >預約使用</a
+          >
+          <ul class="dropdown-menu p-2">
+            <li>
+              <a class="dropdown-item" href="reservation.html">預約儀器使用</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="sw_reservation.html">軟體預約</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown p-3">
+          <a
+            class="navbar-item link-dark link-offset-3 link-underline-opacity-0 link-underline-opacity-100-hover dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            data-bs-offset="10,20"
+            href="#"
+            >使用教學與規範</a
+          >
+          <ul class="dropdown-menu p-2">
+            <li>
+              <a class="dropdown-item" href="process.html">預約流程教學</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="online_training.html"
+                >儀器線上學習</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <a
+          class="navbar-item p-3 link-dark link-offset-3 link-underline-opacity-0 link-underline-opacity-100-hover"
+          href="loginadmin.html"
+          >後台管理</a
+        >
+      </div>
+    </nav>
+
+    <!-- main -->
+    <div class="container w-75" id="main_contain" style="height: 2000px">
+      <!-- breadcrumb -->
+      <nav style="--bs-breadcrumb-divider: '/'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a
+              class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              href="index.html"
+              style="font-size: 14px"
+              >首頁</a
+            >
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <span style="font-size: 14px; color: #005ab5">儀器預約狀況</span>
+          </li>
+        </ol>
+      </nav>
+      <div class="text-center fw-bold fs-4 my-5">儀器使用狀況</div>
+      <!-- container -->
+      <div class="d-flex flex-row justify-content-center">
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row justify-content-center">
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row justify-content-center">
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row justify-content-center">
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="card m-3 text-center">
+          <img
+            src="asset/image/instrument.jpeg"
+            style="height: 100%; width: 100%"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">儀器</h5>
+            <p class="card-text">instrument</p>
+            <p class="card-text">
+              <button
+                onclick="location.href='calender.html'"
+                type="button"
+                class="btn btn-dark"
+              >
+                查詢預約狀況
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- pagination -->
+      <div class="m-3">
+        <div class="d-flex justify-content-between">
+          <div>
+            <a
+              href="#"
+              class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            >
+              ← Previous</a
+            >
+          </div>
+          <div>
+            <button class="btn btn-dark m-2">1</button>
+            <button class="btn btn-dark m-2">2</button>
+            <button class="btn btn-dark m-2">3</button>
+            <button class="btn btn-dark m-2">4</button>
+          </div>
+          <div>
+            <a
+              href="#"
+              class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Next →</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 僅用於模擬頁面長度 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/main.js"></script>
+    <script src="asset/js/loader.js"></script>
+  </body>
+</html>

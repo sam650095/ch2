@@ -1,0 +1,12 @@
+
+.barimage{
+  height: 100px;
+  width: 100px;
+}
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+.navbar-item{
+  transition: color 0.3s ease-in-out;
+  font-size:medium;
+}
